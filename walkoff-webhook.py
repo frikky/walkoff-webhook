@@ -4,8 +4,9 @@ import json
 import requests
 from flask import Flask, request
 
+url = "http://localhost:8080/api"
+status = ""
 def get_access_token(headers):
-    url = "http://localhost:8080/api"
     username = "admin"
     password = "admin"
 
@@ -67,7 +68,7 @@ def update_workflow(headers, item):
 
     return ret
 
-def verify_comlete(headers, workflow_ret):
+def verify_complete(headers, workflow_ret):
     # Code used to verify whether it ran or not
     cnt = 0
     sleep = 1
@@ -84,6 +85,7 @@ def verify_comlete(headers, workflow_ret):
         time.sleep(sleep)
 
     print("Used %d seconds to execute" % cnt*sleep)
+    status = status.text
 
 
 def run_walkoff(input_variable, event):
@@ -120,7 +122,7 @@ def run_walkoff(input_variable, event):
                 break
 
         if not found:
-            print("WORKFLOW VAR FOR %s DOESNT EXIST!! CREATE?" % input_variable)
+            print("Workflow environment variable \"webhook_input\" for %s doesn't exist!! Please create it" % input_variable)
             break
 
         executed = True
@@ -144,10 +146,14 @@ def run_walkoff(input_variable, event):
 
     if not executed:
         # Lets make it :)
-        print("No execution ready for %s. Should create it." % input_variable)
+        print("No execution ready for WALKOFF at %s in %s." % (url, input_variable))
     else:
         print()
-        print("Echo return: %s" % status.json()["node_statuses"][0]["result"])
+        if not status:
+            print("Ran without verifying result. Probably ran :)")
+        else:
+            print("Echo return: %s" % status)
+            
 
 # Initialize the app
 app = Flask(__name__)
