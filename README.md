@@ -2,6 +2,14 @@
 * https://github.com/nsacyber/WALKOFF
 * https://github.com/TheHive-Project/TheHive
 
+## Run - Standalone 
+```bash
+git clone https://github.com/frikky/walkoff-webhook
+cd walkoff-webhook
+pip3 install -r requirements.txt
+python3 walkoff-webhook.py
+```
+
 ## Run - Docker
 ```bash
 git clone https://github.com/frikky/walkoff-webhook
@@ -10,14 +18,6 @@ docker build . -t walkoff-webhook
 docker run \
     -p 9091:9091 \
 	walkoff-webhook
-```
-
-## Run - Standalone 
-```bash
-git clone https://github.com/frikky/walkoff-webhook
-cd walkoff-webhook
-pip3 install -r requirements.txt
-python3 walkoff-webhook.py
 ```
 
 ## What
