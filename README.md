@@ -2,7 +2,9 @@
 * https://github.com/nsacyber/WALKOFF
 * https://github.com/TheHive-Project/TheHive
 
-## Run - Standalone 
+More selfmade at https://github.com/frikky/walkoff-apps
+
+## Run - Standalone
 ```bash
 git clone https://github.com/frikky/walkoff-webhook
 cd walkoff-webhook
@@ -10,7 +12,7 @@ pip3 install -r requirements.txt
 python3 walkoff-webhook.py
 ```
 
-## Run - Docker
+### Run - Docker - You will need to change the url in the python script to not be localhost
 ```bash
 git clone https://github.com/frikky/walkoff-webhook
 cd walkoff-webhook
