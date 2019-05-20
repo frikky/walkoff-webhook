@@ -1,0 +1,237 @@
+{
+    "actions": [
+        {
+            "app_name": "helper",
+            "app_version": "0.0.1",
+            "errors": [],
+            "id_": "e31d8c8b-dd94-e123-53d6-b13696e29e63",
+            "is_valid": true,
+            "label": "echo",
+            "name": "echo",
+            "parameters": [
+                {
+                    "id_": "39cbac87-4500-447a-a4cc-fda290a93a23",
+                    "name": "input_data",
+                    "value": "149905bf-e870-3756-a439-97fa5046426f",
+                    "variant": "WORKFLOW_VARIABLE"
+                }
+            ],
+            "position": {
+                "x": 310,
+                "y": 130
+            },
+            "priority": 3
+        },
+        {
+            "app_name": "helper",
+            "app_version": "0.0.1",
+            "errors": [],
+            "id_": "ea8d6de6-9d07-7bd5-a989-a29f19cdea9c",
+            "is_valid": true,
+            "label": "get_object",
+            "name": "get_json_field",
+            "parameters": [
+                {
+                    "id_": "e56ba307-8c73-4123-b2d1-cdf4d90c2d25",
+                    "name": "input_data",
+                    "value": "e31d8c8b-dd94-e123-53d6-b13696e29e63",
+                    "variant": "ACTION_RESULT"
+                },
+                {
+                    "id_": "4a474ed2-a3c9-4856-bf8c-2d5051e904be",
+                    "name": "field",
+                    "value": "object",
+                    "variant": "STATIC_VALUE"
+                }
+            ],
+            "position": {
+                "x": 270,
+                "y": 190
+            },
+            "priority": 3
+        },
+        {
+            "app_name": "helper",
+            "app_version": "0.0.1",
+            "errors": [],
+            "id_": "40208da4-fe58-03fc-38e7-d7352cbdbfd7",
+            "is_valid": true,
+            "label": "get_title",
+            "name": "get_json_field",
+            "parameters": [
+                {
+                    "id_": "37597f1a-5fcb-4bb2-a37e-18683ad341a8",
+                    "name": "input_data",
+                    "value": "ea8d6de6-9d07-7bd5-a989-a29f19cdea9c",
+                    "variant": "ACTION_RESULT"
+                },
+                {
+                    "id_": "bec989e8-4f41-4a26-b4df-a6a74a15e88f",
+                    "name": "field",
+                    "value": "title",
+                    "variant": "STATIC_VALUE"
+                }
+            ],
+            "position": {
+                "x": 210,
+                "y": 250
+            },
+            "priority": 3
+        },
+        {
+            "app_name": "helper",
+            "app_version": "0.0.1",
+            "errors": [],
+            "id_": "11aedb5b-a54a-f7bd-fb21-ce6480202791",
+            "is_valid": true,
+            "label": "get_id",
+            "name": "get_json_field",
+            "parameters": [
+                {
+                    "id_": "d3c146bc-2422-4dfc-ae9c-428a3bc9aae8",
+                    "name": "input_data",
+                    "value": "ea8d6de6-9d07-7bd5-a989-a29f19cdea9c",
+                    "variant": "ACTION_RESULT"
+                },
+                {
+                    "id_": "91ddaca9-3f6f-4509-8d42-f693377c3a64",
+                    "name": "field",
+                    "value": "id",
+                    "variant": "STATIC_VALUE"
+                }
+            ],
+            "position": {
+                "x": 50,
+                "y": 330
+            },
+            "priority": 3
+        },
+        {
+            "app_name": "helper",
+            "app_version": "0.0.1",
+            "errors": [],
+            "id_": "02b4d56a-ac57-1506-361d-572691be7689",
+            "is_valid": true,
+            "label": "error",
+            "name": "echo",
+            "parameters": [
+                {
+                    "id_": "667f224d-2581-456e-9859-971688898140",
+                    "name": "input_data",
+                    "value": "Condition was not met",
+                    "variant": "STATIC_VALUE"
+                }
+            ],
+            "position": {
+                "x": 370,
+                "y": 330
+            },
+            "priority": 3
+        },
+        {
+            "app_name": "thehive",
+            "app_version": "0.0.3",
+            "errors": [],
+            "id_": "92586951-e160-c158-9997-ee5a754eb834",
+            "is_valid": true,
+            "label": "update_field_string",
+            "name": "update_field_string",
+            "parameters": [
+                {
+                    "id_": "f41b5d83-bf7d-4bf1-b326-390b7a4bab96",
+                    "name": "field_type",
+                    "value": "alert",
+                    "variant": "STATIC_VALUE"
+                },
+                {
+                    "id_": "ea6a75f6-10f4-41af-82cc-5030f0d463c0",
+                    "name": "cur_id",
+                    "value": "11aedb5b-a54a-f7bd-fb21-ce6480202791",
+                    "variant": "ACTION_RESULT"
+                },
+                {
+                    "id_": "3725e0b0-1595-406e-9c07-dde65d5295d6",
+                    "name": "field",
+                    "value": "title",
+                    "variant": "STATIC_VALUE"
+                },
+                {
+                    "id_": "66596d01-c3e3-41de-901f-7863b451f48b",
+                    "name": "data",
+                    "value": "walkoff app automation testing",
+                    "variant": "STATIC_VALUE"
+                }
+            ],
+            "position": {
+                "x": -130,
+                "y": 330
+            },
+            "priority": 3
+        }
+    ],
+    "branches": [
+        {
+            "destination_id": "ea8d6de6-9d07-7bd5-a989-a29f19cdea9c",
+            "id_": "91a339fe-d27b-0434-ede8-71c11a1a6388",
+            "source_id": "e31d8c8b-dd94-e123-53d6-b13696e29e63"
+        },
+        {
+            "destination_id": "40208da4-fe58-03fc-38e7-d7352cbdbfd7",
+            "id_": "c1f18a9f-bcd7-6ee8-6188-2c6e72735ee9",
+            "source_id": "ea8d6de6-9d07-7bd5-a989-a29f19cdea9c"
+        },
+        {
+            "destination_id": "b1bf8800-f94a-20b2-1f3e-f86ab6a36e2a",
+            "id_": "b5ef8314-ced6-9f8f-7b6c-a3c23ded06e6",
+            "source_id": "40208da4-fe58-03fc-38e7-d7352cbdbfd7"
+        },
+        {
+            "destination_id": "11aedb5b-a54a-f7bd-fb21-ce6480202791",
+            "id_": "9059f0b4-0381-352c-f4a6-e0eb4bdcb354",
+            "source_id": "b1bf8800-f94a-20b2-1f3e-f86ab6a36e2a"
+        },
+        {
+            "destination_id": "02b4d56a-ac57-1506-361d-572691be7689",
+            "id_": "6fd95ebb-4fa9-5a73-8e36-6fd9044406e4",
+            "source_id": "b1bf8800-f94a-20b2-1f3e-f86ab6a36e2a"
+        },
+        {
+            "destination_id": "92586951-e160-c158-9997-ee5a754eb834",
+            "id_": "3387d69a-88cd-4c03-cbe6-97dcb11deb2b",
+            "source_id": "11aedb5b-a54a-f7bd-fb21-ce6480202791"
+        }
+    ],
+    "conditions": [
+        {
+            "app_name": "Builtin",
+            "app_version": "1.0.0",
+            "conditional": "if \"portscan\" in get_title.result.lower():\n    selected_node = get_id\nelse:\n    selected_node = error",
+            "errors": [],
+            "id_": "b1bf8800-f94a-20b2-1f3e-f86ab6a36e2a",
+            "is_valid": true,
+            "label": "Condition",
+            "name": "Condition",
+            "position": {
+                "x": 210,
+                "y": 330
+            }
+        }
+    ],
+    "description": "",
+    "errors": [],
+    "id_": "db79e4ef-6687-cf62-3115-07d54b072047",
+    "is_valid": true,
+    "name": "AlertCreation",
+    "start": "e31d8c8b-dd94-e123-53d6-b13696e29e63",
+    "tags": [],
+    "transforms": [],
+    "triggers": [],
+    "workflow_variables": [
+        {
+            "description": "",
+            "id_": "149905bf-e870-3756-a439-97fa5046426f",
+            "name": "webhook_input",
+            "value": "{'operation': 'Creation', 'details': {'tlp': 3, 'caseTemplate': None, 'tags': ['TheHive4Py'], 'follow': True, 'severity': 2, 'status': 'New', 'title': 'Testing walkoff title', 'description': 'N/A', 'customFields': {}, 'lastSyncDate': 1558293294193}, 'startDate': 1558293294591, 'base': True, 'requestId': 'a703b09bcc3bea8f:-2707cefd:16ad173b9eb:-8000:205', 'rootId': 'd159b611493cafd322e4a0a2cc5a2610', 'object': {'tlp': 3, 'caseTemplate': None, 'tags': ['TheHive4Py'], 'severity': 2, 'id': 'd159b611493cafd322e4a0a2cc5a2610', 'createdBy': 'admin', 'artifacts': [], '_id': 'd159b611493cafd322e4a0a2cc5a2610', 'title': 'Testing walkoff title', 'type': 'external', 'description': 'N/A', 'sourceRef': '9ec84a', '_type': 'alert', 'source': 'instance1', 'date': 1558293294000, 'follow': True, '_parent': None, 'customFields': {}, 'status': 'New', '_routing': 'd159b611493cafd322e4a0a2cc5a2610', '_version': 1, 'createdAt': 1558293294192, 'lastSyncDate': 1558293294193}, 'objectId': 'd159b611493cafd322e4a0a2cc5a2610', 'objectType': 'alert'}"
+        }
+    ]
+}

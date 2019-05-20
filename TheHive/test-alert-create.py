@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import uuid
+import time
 from thehive4py.api import TheHiveApi
 from thehive4py.models import Alert, AlertArtifact, CustomFieldHelper
 
@@ -24,9 +25,9 @@ def makealert(input_title):
     print(response.text)
     print(response.status_code)
 
-print('Create Alert - should NOT be changed')
-makealert("Testing walkoff title")
+timeout=8
 print('Create Alert - should be changed')
 makealert("Testing walkoff portscan title")
-print('Create Alert - should NOT be changed')
-makealert("Testing walkoff title")
+#time.sleep(timeout)
+#print('Create Alert - should be changed')
+#makealert("Testing walkoff portscan title")
